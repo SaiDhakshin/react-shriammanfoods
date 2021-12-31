@@ -4,6 +4,7 @@ import Contact from "./Contact";
 import Header from "./UI/Header";
 import Footer from './UI/Footer';
 import Form from "./UI/Form";
+import AboutProduct from "./AboutProduct";
 
 const Home =() => {
     return(
@@ -11,6 +12,8 @@ const Home =() => {
             <Header/>
             <Showcase/>
             <div className='container mx-auto'>
+
+            <AboutProduct/>
 
             <Location/>
             <div className='container mx-auto'>

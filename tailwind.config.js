@@ -18,7 +18,11 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
 
-    extend: {},
+    extend: {
+      spacing: {
+        '144': '30rem',
+      }
+    },
     colors : {
       primary : '#1e3a8a'
     }
