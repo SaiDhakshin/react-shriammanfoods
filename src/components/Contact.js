@@ -1,9 +1,14 @@
 
 import Form from "./UI/Form";
 
+import Header from "./UI/Header";
+import Footer from "./UI/Footer";
+
 const Contact = () => {
     return(
-        <div className='container'>
+        <div>
+        <div className='container mx-auto'>
+            <Header/>
             <h2 className='p-5 text-center text-2xl '>Contact Us</h2>
             
             <ul className='p-5 text-sm float-left'>
@@ -12,8 +17,11 @@ const Contact = () => {
                 <li>7904012706</li>
             </ul>
             <Form />
-        
+            </div>
+        <Footer/>
+
         </div>
+        
     );
 }
 
