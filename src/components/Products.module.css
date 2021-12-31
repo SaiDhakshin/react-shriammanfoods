@@ -1,0 +1,29 @@
+ .button {
+     background-color: #0f172a;
+     color: #fff;
+     padding : 5px;
+     border-radius: 5px;
+     text-align: center;
+     width : 100px;
+     height: 8vh;
+    margin-top : 25px;
+    margin-bottom: 10px;
+ }
+
+ .quantity {
+     height : 8vh;
+     width : 5rem;
+     border-radius: 25px;
+    margin-left : 5px; 
+    }
+ 
+
+ @media (min-width : 968px) {
+    .quantity {
+        height : 7vh;
+        width : 5rem;
+        border-radius: 25px;
+        
+
+    }
+ }

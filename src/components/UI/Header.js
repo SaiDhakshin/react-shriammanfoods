@@ -26,9 +26,10 @@ const Header = () => {
            
             <div className='flex'>
             <img className='rounded object-contain  h-40  mx-auto' src={logo}></img>
-            <img className='object-contain h-12 w-10 mx-auto ml-10 mt-10 absolute top-2 right-30' src={cartPng}></img>
-            <img className='object-contain h-12 w-10 mx-auto ml-10 mt-10 absolute top-2 right-10' src={avatar} 
+            <img className='object-contain h-12 w-10 mx-auto ml-10 mt-10 absolute top-2 right-30' src={cartPng}
             onClick={onCartClick}></img>
+            <img className='object-contain h-12 w-10 mx-auto ml-10 mt-10 absolute top-2 right-10' src={avatar} 
+            ></img>
             </div>
             <div className='flex '>
             <NavLink to='/home' className='flex-initial basis-2/4 p-10 min-w-min'>Home</NavLink>
