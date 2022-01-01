@@ -6,30 +6,42 @@ import classes from './Header.module.css';
 import avatar from '../../img/man.png';
 import {useState} from 'react';
 import Cart from '../Cart';
+import Dropdown from './Dropdown';
 
 const Header = () => {
 
     const [cartShown , setCartShown] = useState(false);
+    const [profileShown , setProfileShown] = useState(false);
 
     const onCartClick = () => {
-        console.log('Cart clicked');
+        
         setCartShown(true);
     }
 
     const hideCart = () => {
-        console.log('Cart closed');
+        
         setCartShown(false);
+    }
+
+    const onProfileClick = () => {
+        console.log('Profile clicked');
+        setProfileShown(!profileShown);
+    }
+
+    const hideProfile = () => {
+        console.log('Profile hidden');
+        setProfileShown(false);
     }
 
     return (
         <div>
            
             <div className='flex'>
-            <img className='rounded object-contain  h-40  mx-auto' src={logo}></img>
+            <img className='rounded object-contain  h-40  mx-auto ' src={logo} ></img>
             <img className='object-contain h-12 w-10 mx-auto ml-10 mt-10 absolute top-2 right-30' src={cartPng}
             onClick={onCartClick}></img>
-            <img className='object-contain h-12 w-10 mx-auto ml-10 mt-10 absolute top-2 right-10' src={avatar} 
-            ></img>
+            <img className='object-contain h-12 w-10 mx-auto ml-10 mt-10 absolute top-2 right-10 cursor-pointer' src={avatar} 
+           onClick={onProfileClick} ></img>
             </div>
             <div className='flex '>
             <NavLink to='/home' className='flex-initial basis-2/4 p-10 min-w-min'>Home</NavLink>
@@ -37,6 +49,7 @@ const Header = () => {
             <NavLink to='/about' className='flex-initial basis-2/4 p-10 min-w-min'>About</NavLink>
             <NavLink to='/faq' className='flex-initial basis-2/4 p-10 min-w-min'>FAQ</NavLink>
             {cartShown && <Cart onClose={hideCart} />}
+            {profileShown && <Dropdown onClose={hideProfile} />}
             </div>
            
         </div>
