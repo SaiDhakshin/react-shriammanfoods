@@ -10,7 +10,9 @@ import Products from "./Products";
 const Home =() => {
     return(
         <div>
-            <Header/>
+            
+            <Header />
+           
             <Showcase/>
             <div className='container mx-auto'>
 

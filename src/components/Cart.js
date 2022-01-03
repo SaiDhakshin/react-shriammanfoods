@@ -18,14 +18,24 @@ const Cart = (props) => {
         props.onClose();
     }
 
+    const onOrder = () => {
+      fetch('http://localhost:8000/order',{
+        method : 'POST',
+        body : {
+          cartItems : cartItems,
+        }
+      })
+    }
+
     return(
         <Modal onClose={onClose}>
     
       <div className={classes.total}>
         {isCartEmpty && <p>No products in Cart.</p>}
-        {cartItems.map(item => <CartItem key={item.id} id={item.id} name={item.name} price={item.price} totalPrice={item.totalPrice}
+        {!isCartEmpty &&  cartItems.map(item => <CartItem key={item.id} id={item.id} name={item.name} price={item.price} totalPrice={item.totalPrice}
         quantity={item.quantity}/>)}
-        <span>Total Amount</span>
+        {!isCartEmpty && <button onClick={onOrder}>Order</button>}
+       
        
       </div>
       
