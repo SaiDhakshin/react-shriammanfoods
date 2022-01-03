@@ -7,11 +7,17 @@ import avatar from '../../img/man.png';
 import {useState} from 'react';
 import Cart from '../Cart';
 import Dropdown from './Dropdown';
+import {useDispatch , useSelector} from 'react-redux';
+
 
 const Header = () => {
 
     const [cartShown , setCartShown] = useState(false);
     const [profileShown , setProfileShown] = useState(false);
+
+    
+
+
 
     const onCartClick = () => {
         

@@ -9,9 +9,10 @@ const Cart = (props) => {
 
   const dispatch = useDispatch();
 
-  const cartItems = useSelector(state => state.items);
+  const cartItems = useSelector(state => state.cart.items);
+  const isCartEmpty = useSelector(state => state.cart.isEmpty);
 
-  const [isEmpty , setIsEmpty] = useState(true);
+
 
     const onClose = () =>{
         props.onClose();
@@ -21,7 +22,7 @@ const Cart = (props) => {
         <Modal onClose={onClose}>
     
       <div className={classes.total}>
-        {isEmpty && <p>No products in Cart.</p>}
+        {isCartEmpty && <p>No products in Cart.</p>}
         {cartItems.map(item => <CartItem key={item.id} id={item.id} name={item.name} price={item.price} totalPrice={item.totalPrice}
         quantity={item.quantity}/>)}
         <span>Total Amount</span>
