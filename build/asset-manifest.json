@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e61ea1e1.css",
+    "main.js": "/static/js/main.95a982d7.js",
+    "static/js/787.070db070.chunk.js": "/static/js/787.070db070.chunk.js",
+    "static/media/AMMAN IDLY_page-0001.jpg": "/static/media/AMMAN IDLY_page-0001.c139eaecbf906eca85f2.jpg",
+    "static/media/ (1).jpg": "/static/media/398dcf8341363bee65705747a85403c5 (1).656bce663d205b915b72.jpg",
+    "static/media/shri amman.jpg": "/static/media/shri amman.e4bdfac2b77aa03dd052.jpg",
+    "static/media/Dosa.jpg": "/static/media/Dosa.5a375e3708d8020f8eac.jpg",
+    "static/media/productimage.jpeg": "/static/media/productimage.1938a275b514eb923dea.jpeg",
+    "static/media/idli.jpg": "/static/media/idli.172bcb24f48a5180cc49.jpg",
+    "static/media/fridge-5930424_1920.png": "/static/media/fridge-5930424_1920.01347ba6b1e5bd81ff91.png",
+    "static/media/man.png": "/static/media/man.7592b515db23ff41b4dc.png",
+    "static/media/undraw_about_me_re_82bv.svg": "/static/media/undraw_about_me_re_82bv.d1f5f038d736e9806cb8b025de1884ab.svg",
+    "static/media/icons8-instagram.svg": "/static/media/icons8-instagram.c83e628eea4e83e0d2b6c8e54910510c.svg",
+    "static/media/undraw_breakfast_psiw.svg": "/static/media/undraw_breakfast_psiw.6c3c2e038c4c5e1ce73171959d4d5d64.svg",
+    "static/media/shopping-cart.png": "/static/media/shopping-cart.96c73cb49987ccdf1154.png",
+    "static/media/undraw_contact_us_re_4qqt.svg": "/static/media/undraw_contact_us_re_4qqt.13c80369250d8f0aff509318d9d484eb.svg",
+    "static/media/undraw_male_avatar_323b.svg": "/static/media/undraw_male_avatar_323b.e27af67272cffba64b0aa4f01ac42727.svg",
+    "static/media/icons8-twitter.svg": "/static/media/icons8-twitter.fe06d572bd13680e66f4d31fc7cf1832.svg",
+    "index.html": "/index.html",
+    "main.e61ea1e1.css.map": "/static/css/main.e61ea1e1.css.map",
+    "main.95a982d7.js.map": "/static/js/main.95a982d7.js.map",
+    "787.070db070.chunk.js.map": "/static/js/787.070db070.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e61ea1e1.css",
+    "static/js/main.95a982d7.js"
+  ]
+}
