@@ -3,10 +3,16 @@ import Modal from "./Modal";
 import classes from '../Cart.module.css';
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
+import {useDispatch , useSelector} from 'react-redux';
+import axios from 'axios';
+import { accountActions } from "../../store/store";
 
 const Dropdown = (props) => {
 
-    const [isLoggedIn , setIsLoggedIn] = useState(false);
+    // const [isLoggedIn , setIsLoggedIn] = useState(false);
+
+    const isLoggedIn = useSelector(state => state.account.isLoggedIn);
+    const dispatch = useDispatch();
 
 
     const onClose = () =>{
@@ -22,9 +28,13 @@ const Dropdown = (props) => {
     }
 
     const onAccountHandler = () => {
-        fetch('/auth/google');
+        window.open('http://localhost:8000/auth/google','_self');
+        dispatch(accountActions.login('true'));
     }
-
+    
+    const logout = () => {
+        window.open('http://localhost:8000/logout','_self');
+    }
 
 
     return (
@@ -33,9 +43,10 @@ const Dropdown = (props) => {
             <div className={classes.total} onClick={onClose}>
             <ul>
                 
-                <a href='http://localhost:8000/auth/google' >{account}</a>
+                {/* <a href='http://localhost:8000/auth/google'>{account}</a> */}
+                <li onClick={onAccountHandler}>{account}</li>
                 <li>My Orders</li>
-                <li>{exit}</li>
+                <li onClick={logout}>{exit}</li>
             </ul>
         </div>
         </Modal>

@@ -45,26 +45,43 @@ const cartSlice = createSlice({
 
 const accountSlice = createSlice({
     name : 'account',
-    initialState : {accountPicture : ''},
+    initialState : {isLoggedIn : false , user : null},
     reducers : {
-        update(state,action) {
-            state.accountPicture = action.payload;
-        },
-        delete(state,action) {
-            state.accountPicture = '';
+       login(state , action) {
+           state.isLoggedIn = true;
+           state.user = action.payload;
+       },
+       logout(state , action) {
+           state.isLoggedIn = false;
+       }
+    }
+})
+
+const locationSlice = createSlice({
+    name : 'location',
+    initialState : {lat : '' , lng : ''},
+    reducers : {
+        setLocation(state,action) {
+            state.lat = action.payload.lat;
+            state.lng = action.payload.lng;
         }
     }
 })
 
+
+
 const store = configureStore({
     reducer : {
         cart : cartSlice.reducer,
-        account : accountSlice.reducer
+        account : accountSlice.reducer,
+        location : locationSlice.reducer
     }
 });
 
 export const cartActions = cartSlice.actions;
 
 export const accountActions = accountSlice.actions;
+
+export const locationActions = locationSlice.actions;
 
 export default store;

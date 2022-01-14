@@ -14,6 +14,7 @@ const Products = () => {
             name : 'Batter',
             price : 29,
         }));
+        
     }
 
     return(
