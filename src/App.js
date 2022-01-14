@@ -10,7 +10,7 @@ import {BrowserRouter , Routes} from 'react-router-dom';
 import About from './components/About';
 import Faq from './components/Faq';
 import {useDispatch , useSelector} from 'react-redux';
-import axios from 'axios';
+import { axiosInstance } from './config';
 import { accountActions } from './store/store';
 import Order from './components/Order';
 import Summary from './components/Summary';
@@ -42,7 +42,7 @@ function App() {
     //   })
     // }
 
-     await axios.get('http://127.0.0.1:8000/login/success')
+     await axiosInstance.get('login/success')
 
     .then(res => {
      

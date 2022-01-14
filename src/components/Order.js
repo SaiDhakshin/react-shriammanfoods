@@ -12,6 +12,7 @@ import Maps from "./Maps";
 import axios from "axios";
 import {BrowserRouter , Routes , Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import { axiosInstance } from "../config";
 
 
 
@@ -38,7 +39,7 @@ const Order = (props) => {
 
 
 
-        axios.post('/confirm',{data : {name : name ,
+        axiosInstance.post('/confirm',{data : {name : name ,
         email : email , 
     phone : phone ,
     location : location,
